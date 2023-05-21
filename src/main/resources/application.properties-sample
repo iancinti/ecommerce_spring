@@ -1,0 +1,31 @@
+# Configuración de la base de datos MySQL
+spring.datasource.url= jdbc:mysql://localhost:3306/[NOMBRE_DE_LA_BASE_DE_DATOS]
+spring.datasource.username= [NOMBRE_DE_USUARIO]
+spring.datasource.password= [CONTRASEÑA]
+
+# Configuración de Hibernate
+# Por defecto, la propiedad spring.jpa.hibernate.ddl-auto está configurada en "update"
+spring.jpa.properties.hibernate.show_sql=false
+#spring.jpa.hibernate.show-sql=true
+spring.jpa.hibernate.cache.use_query_cache=false
+spring.jpa.hibernate.cache.use_second_level_cache=false
+
+# Configuración de la carga de archivos multipartes
+spring.http.multipart.max-file-size=1500KB
+spring.http.multipart.max-request-size=1500KB
+
+# Configuración de la aplicación
+app.name = Ecommerce-starter
+
+# Configuración de JWT
+jwt.header = Authentication
+# 60 * 60 * 24 = 86400 (Tiempo de expiración del token en segundos)
+jwt.expires_in = 86400
+jwt.secret = vianee2
+#jwt.cookie = AUTH-TOKEN
+
+# Configuración de Redis
+redis.host = [URL_DE_REDIS*]
+redis.port = [PUERTO_DE_REDIS*]
+redis.password = [CONTRASEÑA_DE_REDIS*]
+
